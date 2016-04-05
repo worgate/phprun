@@ -1,0 +1,19 @@
+SQLi code
+
+=connect to the server 
+$link = @mysqli_connect("localhost","user","password","database name") or die("can't connect");
+OR
+$link = @mysqli_connect("localhost","user","password");
+@mysqli_select_db($link,"database name")
+
+=close
+mysqli_close($link);
+
+
+=send command
+$insert = mysqli_query($link, "INSERT......"");
+OR 
+$mand = "INSERT .......";
+$r = mysqli_query($link,$mand);
+
+
