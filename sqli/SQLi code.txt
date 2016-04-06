@@ -17,4 +17,16 @@ OR
 $mand = "INSERT .......";
 $r = mysqli_query($link,$mand);
 
-
+=table fetch
+echo "<br>from  people<br>";
+	echo "<table>";
+	$result = mysqli_query($link,"select * from people");
+	while ($data = mysqli_fetch_array($result)) {
+		echo "<tr>";
+		echo "<td>{$data['id']}</td>
+				<td>{$data['name']}</td>
+				<td>{$data['address']}</td>
+				<td>{$data['email']}</td>";
+		echo "</tr>";
+	}
+	echo "</table>";
