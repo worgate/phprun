@@ -12,6 +12,7 @@ mysqli_close($link);
 
 =send command
 $insert = mysqli_query($link, "INSERT......"");
+@mysqli_query($link,"INSERT INTO message VALUES ('HLLO') ");
 OR 
 $mand = "INSERT .......";
 $r = mysqli_query($link,$mand);
